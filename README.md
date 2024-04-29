@@ -1,93 +1,136 @@
-# Experiment--07-Linear-and-joint-interpolation-of-industrial-manipulator-
+# Experiment-08-Pick-and-place-of-objects-using-industrial-manipulator-
 
 ### Aim :
-      To understand linear and joint interpolation of industrial manipulator and develop a program for the same 
-      
+      To pick and place a regular shape using two finger gripper on the conveyor belt 
 ### Equipment Required: 
-      Instrial manipulator , teach pendant and associated program platform 
+      Instrial manipulator , teach pendant and associated program platform , two finger dh gripper 
       
-### Theory 
-    The following interpolation schemes are available in most of the robot controllers.
-1. Joint interpolation
-2. Straight line interpolation
-3. Circular interpolation
-4. Irregular smooth motions (manual lead through programming).
-#### Joint interpolation: 
-The controller determines how far each joint must move to get from the first point defined in the programme to the next. It then selects the joint that
-requires the longest time. This determines the amount of movement for other axes such that all the axes start and stop at the same time. Joint interpolation is the default procedure for many commercial robots.
+### Theory: 
 
-#### Straight-line interpolation: 
-In this interpolation, the robot controller computes the straight-line path between two points and develops the sequence of addressable point along the path for the robot to pass through.
+A pick and place robot has several dedicated parts, such as:
 
-#### Circular interpolation: 
-This requires the programmer to define a circle in the
-robot’s workspace. This is done by specifying three points that lie along the circle. The controller constructs the circle by selecting a series of points that lie closer to the circle. These movements are actually small straight lines. If the addressable points are dense then the linear approximation becomes very much like circle.
+Robot Arm tool: A robotic arm, also known as a manipulator, is the extension of the robot by using cylindrical or spherical parts. links, and joints.
+
+End Effector: The end effector is the accessory at the end of the robotic arm, that does the required job such as gripping objects. The end effectors can be designed to perform different functionalities based on requirements.
+
+Actuators: Actuators create the motion in the robotic arm and end effectors. The linear actuators are basically any type of motor, such as servo motor, stepper motor, or hydraulic cylinder.
+
+Sensors: You can think of sensors as the eyes of the robots. The sensors do the tasks like identifying the position of the object.
+
+Controllers: Controllers synchronize and control the movement of different actuators of a robot, thereby being the brain behind the smooth robotic operation.
 
 
-#### Manual lead through Programming: 
-When the manipulator wrist is moved by the programmer to teach, the movements consist of combination of smooth motion segments. These segments are sometimes approximately straight lines or curves or back and forth motions. These movements are referred as irregular smooth motions and an interpolation is involved to achieve them.
+### Two finger gripper 
 
+DH-Robotics
+Adaptive Gripper AG-95 TM Kit
+The AG-95 adaptive gripper is designed for multi-purpose gripping applications and can pick objects in different sizes and shapes without changing the end-of-arm tools, with a large stroke and adjustable gripping force. It’s also easy-to-use due to seamless integration with TM collaborative robots.
 
+Through a plug-in installed in the TM flow, user could easily get full access to the control of gripper, including position and force control, as well as gripping detection. With such functions, DH-Robotics AG-95 gripper improves the gripping and manipulating capability of robots used in different scenarios such as machine tending, electronics/automobile components handling, medica, etc.
 
+Plug & Play with TM robots
+Integrated design, easy-to-use
+Large stroke
+Parallel & adaptive gripping
+Gripping & drop detection
+Force & position adjustment
+Self-locking
 
-![Robot-interpolation-PTP-LIN-CIRC](https://user-images.githubusercontent.com/36288975/201615171-d0886aaa-8220-4b0c-8a1d-3d8a5c69c76a.png)
+                  ![ag-95](https://user-images.githubusercontent.com/36288975/201618444-9b5a4749-9663-464d-814b-170217763a76.png)
+### Figure -01 DH gripper with two finger gripper 
 
-### Figure -01 difference between P-P , joint and linear interpolation 
+#### Specifications
 
-
-### Program : 
-DART studio screen shots for linear interpolation 
-
-
-DART studio screen shots for joint interpolation 
-
-
-
-![co1](https://github.com/laxman2054/Experiment--07-Linear-and-joint-interpolation-of-industrial-manipulator-/assets/118680826/d8f378a0-f1af-40e2-a327-f2aa4ad5d538)
-
-
-
-
-
-
-
-
+Opening stroke	95mm
+Gripping force 	45-160N
+Recommended max payload	3kg*
+Max closing speed	0.7s
+Gripper Weight	1kg
+Position repeatability	0.03mm
+Supply voltage	24VDC±10%
+Current	≤1.5A
 
 
 
+### Doosan M1013 industrial collaborative robot manipulator 
+Doosan Robotics designs collaborative robots for all types of operators, from engineers to teachers to designers of industrial robotics solutions. There are currently 4 robotic arms in the range, including this M1013 ROS robotic arm. With 6 degrees of freedom and a total reach of 1,300 mm, the Doosan M1013 Robotic Arm offers the speed and precision of execution necessary for all types of automated operation.
+
+#### specifications 
+Technical specifications of the Doosan Robotics M1013 arm:
+Degrees of freedom: 6.
+Payload: 10 kg.
+Reach: 1,300 mm.
+Tool speed: 1 m/s.
+Repeatability: ±0.1 mm.
+Operating temperature: 5–45 °C.
+Weight: 33 kg.
+Installation position: floor, ceiling, walls.
 
 
 
+![download](https://user-images.githubusercontent.com/36288975/201624230-89cc83ff-cecd-49ea-84c6-c67066e9d157.jpg)
 
+### Figure -02 Doosan M1013 industrial collaborative robot manipulator 
 
+#### Procedure : 
 
+1. click on dart platfom icon ![image](https://user-images.githubusercontent.com/36288975/201621038-f1248586-5c20-40fd-8a74-68c7d8b44939.png)
+2. click on the internet interface 
+![image](https://user-images.githubusercontent.com/36288975/201621235-3b8b46a9-3c19-4207-9ea2-6a7954eb6135.png)
+and click on the connect icon 
 
-
-
-
-### Robot movements 
-
-
-
-
-![co2](https://github.com/laxman2054/Experiment--07-Linear-and-joint-interpolation-of-industrial-manipulator-/assets/118680826/ec962665-0801-4425-a685-1bba7fa843dc)
-
-
-
-
-
-
-![co3](https://github.com/laxman2054/Experiment--07-Linear-and-joint-interpolation-of-industrial-manipulator-/assets/118680826/fad8be46-bc78-4103-a94a-46e205245356)
-
-
-
-
-
+3. click on the 
 
 
 
 
-### Results:  
 
 
-Thus,the linear and joint interpolation of industrial robot is performed and executed successfully, the output is verified.
+
+
+
+
+
+
+
+
+
+
+
+
+### output video and screen shots of pick and place 
+
+
+![r1](https://github.com/AlluguriSrikrishnateja/Experiment-08-Pick-and-place-of-objects-using-industrial-manipulator-/assets/118343892/7c9638af-7af1-49af-9994-0bbd6926601d)
+
+
+![r2](https://github.com/AlluguriSrikrishnateja/Experiment-08-Pick-and-place-of-objects-using-industrial-manipulator-/assets/118343892/44178f50-be54-495d-b06e-3b230508771a)
+
+
+![r3](https://github.com/AlluguriSrikrishnateja/Experiment-08-Pick-and-place-of-objects-using-industrial-manipulator-/assets/118343892/a8c78a2d-46b7-4a26-8b85-8d320ee6f3b7)
+
+
+![r4](https://github.com/AlluguriSrikrishnateja/Experiment-08-Pick-and-place-of-objects-using-industrial-manipulator-/assets/118343892/02d7f479-c009-4e91-8133-931541121103)
+
+
+![r5](https://github.com/AlluguriSrikrishnateja/Experiment-08-Pick-and-place-of-objects-using-industrial-manipulator-/assets/118343892/4d226164-ed85-43f9-98de-cb4f51530a9f)
+
+![r6](https://github.com/AlluguriSrikrishnateja/Experiment-08-Pick-and-place-of-objects-using-industrial-manipulator-/assets/118343892/90852e12-39d8-413c-b36b-18cc671d54bd)
+
+
+
+## VIDEO LINK:
+
+            
+              https://drive.google.com/file/d/1deOhh5pScxJRYAxUWoyqGtORdXG82haO/view?usp=drive_link
+            
+
+
+### Results: 
+            Thus, The Pick and Place of the objects using industrial manipulators are performed and executed.
+
+
+
+
+
+
